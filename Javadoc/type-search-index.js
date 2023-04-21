@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"fr.simplon.oxosondages_client","l":"OxoSondagesClientApplication"},{"p":"fr.simplon.oxosondages_client.entity","l":"Sondage"},{"p":"fr.simplon.oxosondages_client.controller","l":"SondageController"}];updateSearchResults();

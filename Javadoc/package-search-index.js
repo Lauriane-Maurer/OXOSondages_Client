@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"fr.simplon.oxosondages_client"},{"l":"fr.simplon.oxosondages_client.controller"},{"l":"fr.simplon.oxosondages_client.entity"}];updateSearchResults();

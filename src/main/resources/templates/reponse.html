@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>reponse</title>
+</head>
+<body>
+<header>
+  <h1>Réponse au sondage</h1>
+</header>
+
+
+<section th:object="${sondage}">
+    <h1 th:text="${sondage.description}"></h1>
+    <div class="data">
+        <p th:text="${sondage.dateCreation}"></p>
+        <p th:text="${sondage.dateCloture}"></p>
+        <p th:text="${sondage.question}"></p>
+    </div>
+
+    <form action="/confirmation" method="get">
+        <label for="reponse-oui">Oui</label>
+        <input type="radio" id="reponse-oui" name="reponse" value="oui">
+
+        <label for="reponse-non">Non</label>
+        <input type="radio" id="reponse-non" name="reponse" value="non">
+
+        <button type="submit">Envoyer</button>
+    </form>
+</section>
+
+</body>
+</html>

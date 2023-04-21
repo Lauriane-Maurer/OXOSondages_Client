@@ -36,14 +36,14 @@
                             <td class="cellule" th:text="${sondage.dateCreation}"></td>
                             <td class="cellule" th:text="${sondage.dateCloture}"></td>
                             <td class="cellule" th:text="${sondage.createur}"></td>
+                            <td><button type="button" class="btn btn-primary" th:onclick="|window.location.href='@{/sondages/{id}(id=${sondage.id})}'|">Répondre</button></td>
                             <td><button type="button" class="btn btn-primary" th:onclick="|window.location.href='@{/sondages/update/{id}(id=${sondage.id})}'|">Modifier</button></td>
-                            <td><button type="button" class="btn btn-primary" th:onclick="|window.location.href='@{/sondages/delete/{id}(id=${sondage.id})}'|">Supprimer</button></td>
+                            <td><button class="delete-button" type="button"  th:onclick="|window.location.href='@{/sondages/delete/{id}(id=${sondage.id})}'|">Supprimer</button></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             <button class="bouton-jaune" type="button" onclick="location.href='/sondages/form/add'">Ajouter un sondage</button>
         </main>
-
     </body>
 </html>

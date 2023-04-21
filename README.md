@@ -22,19 +22,16 @@ Pages du site :
 
 ## 4 - Outils de réalisation :
 
-Code réalisé avec : Intellij
-Projet réalisé en Java, HTML, CSS et Javascript  
-Framework utilisé : Spring Boot
+IDE: IntelliJ
+Langage de programmation : Java 17
+Framework : Spring Boot 3.0.6
+Gestionnaire de dépendances : Apache Maven
+Bibliothèques pour le développement web : Spring Web, Spring Boot Starter Thymeleaf
+Outil pour le développement : Spring Boot DevTools
+Bibliothèque pour les tests : Spring Boot Starter Test.
 
 ### Bibliothèques utilisées :
 
-Coté service:
-- Spring Boot DevTools
-- Spring Web
-- Mysql driver
-- Spring Date JPA
-
-Côté client:
 - Spring Boot DevTools
 - Spring Web
 - Thymeleaf

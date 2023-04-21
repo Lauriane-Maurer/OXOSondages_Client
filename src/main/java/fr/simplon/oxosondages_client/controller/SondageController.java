@@ -64,7 +64,7 @@ public class SondageController {
             ResponseEntity<Sondage> response =restTemplate.getForEntity(url, Sondage.class, id);
             Sondage sondage = response.getBody();
             model.addAttribute("sondage", sondage);
-            return "sondage";
+            return "reponse";
         }
 
     /**
@@ -145,4 +145,9 @@ public class SondageController {
             restTemplate.delete(url, id);
             return "redirect:/";
         }
+
+    @GetMapping("/confirmation")
+    public String displayRegistrationMessage() {
+        return "confirmation";
+    }
 }

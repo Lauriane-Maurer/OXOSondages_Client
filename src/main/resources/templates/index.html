@@ -1,10 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Index</title>
+        <link rel="stylesheet" href="/stylesondage.css">
+    </head>
+
+    <body>
+
+         <header>
+            <h3>OXO assurance </h3>
+            <h1>Liste des sondages</h1>
+        </header>
+
+        <main class="main-index">
+
+            <div class="table-container">
+                <table class="tableau">
+                    <thead>
+                    <tr>
+                        <th class="en-tete-tableau">n° du sondage</th>
+                        <th class="en-tete-tableau">Description</th>
+                        <th class="en-tete-tableau">Question</th>
+                        <th class="en-tete-tableau">Date de création</th>
+                        <th class="en-tete-tableau">Date de clôture</th>
+                        <th class="en-tete-tableau">Créateur</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="sondage : ${sondages}">
+                            <td class="cellule" th:text="${sondage.id}"></td>
+                            <td class="cellule" th:text="${sondage.description}"></td>
+                            <td class="cellule" th:text="${sondage.question}"></td>
+                            <td class="cellule" th:text="${sondage.dateCreation}"></td>
+                            <td class="cellule" th:text="${sondage.dateCloture}"></td>
+                            <td class="cellule" th:text="${sondage.createur}"></td>
+                            <td><button type="button" class="btn btn-primary" th:onclick="|window.location.href='@{/sondages/update/{id}(id=${sondage.id})}'|">Modifier</button></td>
+                            <td><button type="button" class="btn btn-primary" th:onclick="|window.location.href='@{/sondages/delete/{id}(id=${sondage.id})}'|">Supprimer</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <button class="bouton-jaune" type="button" onclick="location.href='/sondages/form/add'">Ajouter un sondage</button>
+        </main>
+
+    </body>
 </html>

@@ -1,10 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/stylesondage.css">
+    <title>Form</title>
+
 </head>
+
+
 <body>
-$END$
+<header>
+<h1>Saisie d'un sondage</h1>
+<br>
+</header>
+<main>
+<h5>Remplissez le formulaire: </h5>
+
+<form method="post" th:object="${sondage}">
+    <label>Description: </label><input type="text" name="descritpion" th:field="*{description}" required></label>
+    <br>
+    <label>Question:</label><input type="text" name="question" th:field="*{question}" required>
+    <br>
+    <label>Date de clotûre du sondage:</label><input type="date" name="dateCloture" th:field="*{dateCloture}">
+    <br>
+    <label>Nom du créateur:</label><input type="text" name="createur" th:field="*{createur}" required>
+    <br>
+    <button type="submit">Enregistrer le sondage</button>
+
+    <!-- Ajout des champs cachés pour stocker l'ID et date de création du sondage -->
+    <input type="hidden" th:field="*{dateCreation}" required/>
+    <input type="hidden" th:field="*{id}" required/>
+
+
+</form>
+<button class="bouton-jaune" type="button" onclick="location.href='/'">Tous les sondages</button>
+</main>
 </body>
+<script>
+    const dateClotureInput = document.querySelector('input[name="dateCloture"]');
+    const submitButton = document.querySelector('button[type="submit"]');
+
+    submitButton.addEventListener('click', () => {
+        const dateCloture = new Date(dateClotureInput.value);
+        const currentDate = new Date();
+        if (dateCloture < currentDate) {
+            alert('La date de clôture doit être ultérieure à la date actuelle.');
+        }
+    });
+</script>
 </html>

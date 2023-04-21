@@ -1,0 +1,97 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    border-radius: 10px;
+    background-color: white;
+    margin: 50px 100px;
+    padding: 10px 5px 20px 5px;
+    font-family: arial;
+}
+
+form{
+    text-align: center;
+}
+
+form label {
+    display: inline-block;
+    width: 120px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+form input{
+    display: inline-block;
+    width: 200px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h5 {
+    margin-top: 50px;
+    Text-align: center;
+}
+
+/* Style for the table container */
+.table-container {
+    overflow-y: scroll;
+    height: 400px;
+}
+
+/* Style for the table */
+.tableau {
+    width: 95%;
+    margin: 10px auto 100px auto;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.haut-tableau {
+    position: sticky;
+    background-color: white;
+    top: 0;
+    margin-top: -10px;
+    z-index: 1;
+}
+
+.en-tete-tableau {
+    padding: 10px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.sortable:hover {
+    cursor: pointer;
+}
+
+/* Style for the table cells */
+.cellule {
+    padding: 10px;
+    font-size: 15px;
+}
+
+/* Style for the odd lines of the table */
+tbody tr:nth-child(odd) {
+    background-color: lightgrey;
+}
+
+.bouton-jaune{
+    margin: 50px 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ffac3f;
+    color: black;
+    font-weight: bold;
+}
